@@ -3,8 +3,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtCore import QTimer, QDateTime, Qt
 from PyQt5 import QtWidgets
 from main_ui import Ui_MainWindow  # Import the generated UI class
-
-
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.figure import Figure
 
 
 class MainWindow(QMainWindow):
@@ -23,6 +23,9 @@ class MainWindow(QMainWindow):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_date_time)
         self.timer.start(1000)  # Update every 1000 milliseconds (1 second)
+
+        self.add_best_sellers_chart()
+
 
 
         # Connect buttons to change the content in the stacked widget
@@ -78,6 +81,33 @@ class MainWindow(QMainWindow):
                 text-align: left;
             }
         """)
+
+    def add_best_sellers_chart(self):
+        # Sample data for now
+        items = ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+        sales = [7, 11, 16, 20]
+
+        # Create the matplotlib Figure and Axes
+        fig = Figure(figsize=(4, 3))
+        ax = fig.add_subplot(111)
+
+        # Plot bar chart
+        ax.bar(items, sales, color='#003366')  # Dark blue
+        ax.set_title('Best Sellers')
+        ax.set_ylabel('Sales')
+
+        # Adjust font size of x-axis labels (the items)
+        ax.tick_params(axis='x', labelsize=8)  # Set the font size of x-axis labels (items) to 8
+
+        # Create a canvas for the figure
+        canvas = FigureCanvas(fig)
+        canvas.setParent(self.ui.frameBestSellersChart)
+
+        # Set layout inside the frame to hold the chart
+        layout = QtWidgets.QVBoxLayout(self.ui.frameBestSellersChart)
+        layout.addWidget(canvas)
+
+
 
     def show_dashboard(self):
         self.ui.stackedWidget.setCurrentIndex(0)  # Show Dashboard content

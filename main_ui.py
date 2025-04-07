@@ -192,9 +192,6 @@ class Ui_MainWindow(object):
         self.dashboardw.setGeometry(QtCore.QRect(0, 0, 681, 561))
         self.dashboardw.setStyleSheet("background-color:#ffffff;")
         self.dashboardw.setObjectName("dashboardw")
-        self.label_3 = QtWidgets.QLabel(self.dashboardw)
-        self.label_3.setGeometry(QtCore.QRect(20, 270, 261, 111))
-        self.label_3.setObjectName("label_3")
         self.dateTimeLabel = QtWidgets.QLabel(self.dashboardw)
         self.dateTimeLabel.setGeometry(QtCore.QRect(0, 0, 681, 101))
         self.dateTimeLabel.setStyleSheet("QLabel {\n"
@@ -207,9 +204,6 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.dateTimeLabel.setObjectName("dateTimeLabel")
-        self.label_7 = QtWidgets.QLabel(self.dashboardw)
-        self.label_7.setGeometry(QtCore.QRect(300, 370, 151, 71))
-        self.label_7.setObjectName("label_7")
         self.salesbox = QtWidgets.QFrame(self.dashboardw)
         self.salesbox.setGeometry(QtCore.QRect(40, 120, 181, 101))
         self.salesbox.setStyleSheet("#salesbox\n"
@@ -327,6 +321,38 @@ class Ui_MainWindow(object):
         self.label_23.setGeometry(QtCore.QRect(30, 70, 101, 21))
         self.label_23.setStyleSheet("color:#004aad;")
         self.label_23.setObjectName("label_23")
+        self.chartd = QtWidgets.QFrame(self.dashboardw)
+        self.chartd.setGeometry(QtCore.QRect(40, 240, 281, 301))
+        self.chartd.setStyleSheet("#chartd\n"
+"{\n"
+"border: 1px solid black;\n"
+"border-radius: 10px;\n"
+"}")
+        self.chartd.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.chartd.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.chartd.setObjectName("chartd")
+        self.btnViewSalesReport = QtWidgets.QPushButton(self.chartd)
+        self.btnViewSalesReport.setGeometry(QtCore.QRect(70, 260, 101, 23))
+        self.btnViewSalesReport.setStyleSheet("QPushButton{color: blue;\n"
+"text-decoration: underline;\n"
+"border: none;\n"
+"background: transparent;}\n"
+"QPushButton:hover {\n"
+"color:#8d2721;\n"
+"}\n"
+"")
+        self.btnViewSalesReport.setObjectName("btnViewSalesReport")
+        self.frameBestSellersChart = QtWidgets.QFrame(self.chartd)
+        self.frameBestSellersChart.setGeometry(QtCore.QRect(20, 20, 241, 241))
+        self.frameBestSellersChart.setStyleSheet("background-color: white;\n"
+"border: none;\n"
+"")
+        self.frameBestSellersChart.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frameBestSellersChart.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frameBestSellersChart.setObjectName("frameBestSellersChart")
+        self.label_3 = QtWidgets.QLabel(self.dashboardw)
+        self.label_3.setGeometry(QtCore.QRect(340, 360, 47, 13))
+        self.label_3.setObjectName("label_3")
         self.stackedWidget.addWidget(self.page)
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
@@ -373,15 +399,15 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Orders"))
         self.pushButton_4.setText(_translate("MainWindow", "Sales"))
         self.pushButton_5.setText(_translate("MainWindow", "Log out"))
-        self.label_3.setText(_translate("MainWindow", "TextLabelDASSSSSHBOARD"))
         self.dateTimeLabel.setText(_translate("MainWindow", "March 31, 2025 Monday 09 : 10 : 54 AM"))
-        self.label_7.setText(_translate("MainWindow", "Dashboard"))
         self.label_8.setText(_translate("MainWindow", "Today’s Sales"))
         self.label_9.setText(_translate("MainWindow", "80,000"))
         self.label_17.setText(_translate("MainWindow", "300"))
         self.label_19.setText(_translate("MainWindow", "Today’s total orders"))
         self.label_21.setText(_translate("MainWindow", "40, 000"))
         self.label_23.setText(_translate("MainWindow", "Today’s revenue"))
+        self.btnViewSalesReport.setText(_translate("MainWindow", "View Sales Report"))
+        self.label_3.setText(_translate("MainWindow", "kapoy na"))
         self.label_4.setText(_translate("MainWindow", "INVENTORRRRRRY"))
         self.label_5.setText(_translate("MainWindow", "TextLabelORDERSSSSSSSS"))
         self.label_6.setText(_translate("MainWindow", "TextLabelSALESSSSSSS"))

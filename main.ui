@@ -337,19 +337,6 @@ QPushButton#activeButton {
       <property name="styleSheet">
        <string notr="true">background-color:#ffffff;</string>
       </property>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>270</y>
-         <width>261</width>
-         <height>111</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>TextLabelDASSSSSHBOARD</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="dateTimeLabel">
        <property name="geometry">
         <rect>
@@ -372,19 +359,6 @@ QPushButton#activeButton {
        </property>
        <property name="text">
         <string>March 31, 2025 Monday 09 : 10 : 54 AM</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_7">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>370</y>
-         <width>151</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Dashboard</string>
        </property>
       </widget>
       <widget class="QFrame" name="salesbox">
@@ -710,6 +684,86 @@ border-radius: 10px;
          <string>Today’s revenue</string>
         </property>
        </widget>
+      </widget>
+      <widget class="QFrame" name="chartd">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>240</y>
+         <width>281</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#chartd
+{
+border: 1px solid black;
+border-radius: 10px;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="btnViewSalesReport">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>260</y>
+          <width>101</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{color: blue;
+text-decoration: underline;
+border: none;
+background: transparent;}
+QPushButton:hover {
+color:#8d2721;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>View Sales Report</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frameBestSellersChart">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>241</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border: none;
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>360</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>kapoy na</string>
+       </property>
       </widget>
      </widget>
     </widget>
